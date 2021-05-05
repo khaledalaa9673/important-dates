@@ -7,8 +7,8 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "cover",
+      "backgroundColor": "#068fff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -20,10 +20,15 @@
       "supportsTablet": true
     },
     "android": {
+      "useNextNotificationsApi": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+        
+      },
+      "package":"com.roqay.khaled",
+      "googleServicesFile": "./google-services.json"
+      
     },
     "web": {
       "favicon": "./assets/favicon.png"

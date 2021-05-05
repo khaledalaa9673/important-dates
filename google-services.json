@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "838583847723",
+    "project_id": "important-dates-6ca4a",
+    "storage_bucket": "important-dates-6ca4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838583847723:android:abec5e64fd878d7bab936e",
+        "android_client_info": {
+          "package_name": "com.roqay.khaled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838583847723-sbc793bnctfcms2l1cne99kb3tv9snds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbyFRDTY8MIDgjp5_kKVEH8ogZBHAPftQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838583847723-sbc793bnctfcms2l1cne99kb3tv9snds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

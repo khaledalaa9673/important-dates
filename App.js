@@ -1,21 +1,41 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import AppNavigatior from "./src/navigation/AppNavigation"
+import { createStore, combineReducers, applyMiddleware } from "redux"
+import Thunk from "redux-thunk"
+import { Provider } from "react-redux"
+import authReducer from "./src/store/AuthReducer"
+ 
+ 
+import * as Notifications from 'expo-notifications';
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: false,
+    shouldSetBadge: false,
+  }),
+});
+ 
+const rootReducer = combineReducers({
+  Auth: authReducer,
+})
+
+const store = createStore(rootReducer, applyMiddleware(Thunk))
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Provider store={store}>
+        <AppNavigatior />
+      </Provider>
     </View>
   );
 }
 
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
